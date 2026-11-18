@@ -1,0 +1,51 @@
+{
+  "name": "meu-chat-18-11-b",
+  "version": "1.0.0",
+  "description": "Meu-Chat-18-11-B",
+  "author": "Maikon",
+  "private": true,
+  "main": "electron/main.cjs",
+  "portaDoPrograma": 7774,
+  "devDependencies": {
+    "electron": "33.2.1",
+    "electron-builder": "25.1.8"
+  },
+  "build": {
+    "appId": "com.maikonadvogadomgalt.meuchat1811b.pc",
+    "productName": "Meu-Chat-18-11-B",
+    "executableName": "meu-chat-18-11-b",
+    "directories": {
+      "output": "release"
+    },
+    "asar": false,
+    "files": [
+      "**/*",
+      "!android/**",
+      "!.github/**",
+      "!release/**",
+      "!exe/**",
+      "!node_modules/.cache/**",
+      "!*.zip",
+      "!.sk/**",
+      "!apk.config.json"
+    ],
+    "win": {
+      "target": [
+        "nsis",
+        "portable"
+      ],
+      "icon": "icons/icon-512.png"
+    },
+    "nsis": {
+      "oneClick": true,
+      "perMachine": false,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Meu-Chat-18-11-B",
+      "artifactName": "meu-chat-18-11-b-Instalar.exe"
+    },
+    "portable": {
+      "artifactName": "meu-chat-18-11-b-sem-instalar.exe"
+    }
+  }
+}
